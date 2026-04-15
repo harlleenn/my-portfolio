@@ -3,7 +3,7 @@ import React from 'react'
 export default function Footer() {
   return (
     <div>
-         <div className="py-4 border-t border-black/10 shrink-0 ">
+         <div className="py-4 border-t border-black/10 shrink-0 "id="footer">
           <div className="rounded-lg border border-black/10 p-4 flex flex-col gap-6 h-52">
             {/* Left: label + email input */}
             <div className="flex flex-col gap-2 flex-1 p-4">

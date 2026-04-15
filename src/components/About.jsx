@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function About() {
   return (
-    <div>
+    <div id="about">
         <div  className="mb-8 shrink-0">
           <p className="text-sm text-left tracking-[0.3em] uppercase text-black/40 mb-3">About me</p>
           <p

@@ -5,26 +5,32 @@ import { useState } from "react";
 export default function Projects() {
 
        const projects = [
-          {
-            title: "Neural Interface",
-            year: "2026",
-            tag: "Research",
-            desc: "Exploring human-computer interaction through adaptive neural feedback systems.",
-          },
-          {
-            title: "Gradient OS",
-            year: "2026",
-            tag: "Design Systems",
-            desc: "A unified design language built around perceptual color mathematics.",
-          },
+        {
+  id: 1,
+  title: "Command Palette",
+  year: "2026",
+  tag: "Interaction Design",
+  desc: "A keyboard-first command interface for navigating actions instantly — no clicks, no friction.",
+},
+
+        {
+  id: 2,
+  title: "Wallet Customizer",
+  year: "2026",
+  tag: "UI Component",
+  desc: "A personalizable wallet card with live colour theming, inline editing, and smooth expand interactions.",
+}
        
         ];
     const [activeProject, setActiveProject] = useState(null);
-
+const handleProjectClick = (project) => {
+  setActiveProject(project);
+  console.log("Clicked project:", project);
+}
     
   return (
     <div>
-              <div  className="flex flex-col flex-1 min-h-0">
+            <div  className="flex flex-col flex-1 min-h-0" id="cards">
           <p className="text-sm tracking-[0.3em] uppercase text-left text-black/40 mb-4 shrink-0">Projects</p>
 
           <style>{`
@@ -125,7 +131,7 @@ export default function Projects() {
               const theme = themes[i % themes.length];
               return (
                 <div key={i} className={`card ${theme}`}
-                onClick={() => setActiveProject(p)}>
+                onClick={() => handleProjectClick(p)}>
                   <div className="card-inner">
                     {/* top: tag + year */}
                     <div className="flex items-center justify-between">
@@ -177,9 +183,10 @@ export default function Projects() {
             })}
           </div>
         </div>
-          {activeProject && (
+          {activeProject  && (
         <Modal
-       project={activeProject}
+       activeProject={activeProject}
+     
       onClose={() => setActiveProject(null)}
       //  onClose={onClose()}
         // onClose={() => setActiveProject(null)}  // close modal
