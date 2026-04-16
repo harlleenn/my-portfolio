@@ -1,3 +1,24 @@
 @import "tailwindcss";
 
 
+:root{
+    --bg: #ffffffbc;
+    --text-color: black;
+    --border: black
+}
+
+[data-theme ="dark"] {
+    --bg: black;
+    --text-color: white;
+    --border: white;
+}
+
+/* [data-theme ="light"] {
+    --bg: white;
+    --text-color: pink;
+} */
+body{
+    background-color: var(--bg);
+    color: var(--text-color);
+    border-color: var(--border);
+}

@@ -3,11 +3,11 @@ import React from 'react'
 export default function Footer() {
   return (
     <div>
-         <div className="py-4 border-t border-black/10 shrink-0 "id="footer">
+         <div className="py-4 border-t shrink-0 "id="footer">
           <div className="rounded-lg border border-black/10 p-4 flex flex-col gap-6 h-52">
             {/* Left: label + email input */}
             <div className="flex flex-col gap-2 flex-1 p-4">
-              <p className="text-sm text-left tracking-[0.3em] uppercase text-black/35">Contact me</p>
+              <p className="text-sm text-left tracking-[0.3em] uppercase ">Contact me</p>
               <form
                 className="flex gap-2"
                 onSubmit={(e) => {
@@ -20,12 +20,12 @@ export default function Footer() {
                   name="message"
                   type="text"
                   placeholder="Send me a message."
-                  className="flex-1 text-xs bg-black/[0.03] border border-black/10 rounded-md px-3 py-2 outline-none focus:border-black/30 placeholder-black/25 text-black transition-colors duration-200"
+                  className="flex-1 text-xs border  rounded-md px-3 py-2 outline-none focus:border-black/30 placeholder-black/25 text-black transition-colors duration-200"
                   style={{ fontFamily: "'DM Mono', monospace" }}
                 />
                 <button
                   type="submit"
-                  className="text-xs px-4 py-2 bg-black text-white rounded-md tracking-widest uppercase hover:bg-black/70 transition-all duration-200"
+                  className="text-xs px-4 py-2  rounded-md tracking-widest uppercase hover:bg-black/70 transition-all duration-200"
                   style={{ fontFamily: "'DM Mono', monospace" }}
                 >
                   Send
@@ -69,7 +69,7 @@ export default function Footer() {
                   href={href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex  gap-1.5 text-xs text-black/40  px-3 py-2 hover:text-black  underline"
+                  className="flex  gap-1.5 text-xs  px-3 py-2 hover:text-black  underline"
                   style={{ fontFamily: "'DM Mono', monospace" }}
                 >
                   {icon}
